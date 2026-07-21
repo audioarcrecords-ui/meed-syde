@@ -258,6 +258,17 @@ a {
   z-index: 0;
 }
 
+/* Real photo layer — sits beneath all gradients */
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  background-image: url('../images/meed_20260227_082903_0.jpg');
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.42;
+  z-index: 0;
+}
+
 /* Deep red radial glow */
 .hero-bg::before {
   content: '';
@@ -862,6 +873,17 @@ a {
   position: relative;
   aspect-ratio: 3/4;
   max-width: 380px;
+  overflow: hidden;
+}
+
+.about-real-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .about-img-placeholder {
