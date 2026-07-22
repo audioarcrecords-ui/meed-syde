@@ -262,9 +262,9 @@ a {
 .hero-photo {
   position: absolute;
   inset: 0;
-  background-image: url('../images/meed_raw_20260227_082030.jpg');
+  background-image: url('../images/meed_neon_glasses.jpg');
   background-size: cover;
-  background-position: center 35%;
+  background-position: center 15%;
   opacity: 0.5;
   z-index: 0;
 }
