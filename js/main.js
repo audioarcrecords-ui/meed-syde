@@ -157,6 +157,7 @@ reveals.forEach(el => {
   const items = Array.from(grid.querySelectorAll('.gallery-item'));
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');
+  const lightboxVideo = document.getElementById('lightboxVideo');
   const closeBtn = document.getElementById('lightboxClose');
   const prevBtn = document.getElementById('lightboxPrev');
   const nextBtn = document.getElementById('lightboxNext');
@@ -166,8 +167,23 @@ reveals.forEach(el => {
   function show(index) {
     currentIndex = (index + items.length) % items.length;
     const item = items[currentIndex];
-    lightboxImg.src = item.dataset.full;
-    lightboxImg.alt = item.querySelector('img').alt;
+    const isVideo = item.dataset.type === 'video';
+
+    lightboxVideo.pause();
+    lightboxVideo.removeAttribute('src');
+
+    if (isVideo) {
+      lightboxImg.style.display = 'none';
+      lightboxVideo.style.display = 'block';
+      lightboxVideo.src = item.dataset.full;
+      lightboxVideo.load();
+      lightboxVideo.play().catch(() => {});
+    } else {
+      lightboxVideo.style.display = 'none';
+      lightboxImg.style.display = 'block';
+      lightboxImg.src = item.dataset.full;
+      lightboxImg.alt = item.querySelector('img').alt;
+    }
   }
 
   function open(index) {
@@ -179,6 +195,7 @@ reveals.forEach(el => {
   function close() {
     lightbox.classList.remove('open');
     document.body.style.overflow = '';
+    lightboxVideo.pause();
   }
 
   items.forEach((item, i) => {
