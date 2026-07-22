@@ -40,7 +40,7 @@ function updateActiveNav() {
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 
 // Scroll-triggered reveal
-const reveals = document.querySelectorAll('.release-card, .player-block, .contact-card, .about-img-frame, .about-content, .about-labels, .about-label-item');
+const reveals = document.querySelectorAll('.release-card, .player-block, .contact-card, .about-img-frame, .about-content, .about-labels, .about-label-item, .gallery-item');
 
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -147,6 +147,58 @@ reveals.forEach(el => {
     bpmEl.style.textShadow = '0 0 20px rgba(255,26,26,0.9)';
     setTimeout(() => { bpmEl.style.textShadow = ''; }, 120);
   }, interval);
+})();
+
+// Gallery lightbox
+(function initGalleryLightbox() {
+  const grid = document.getElementById('galleryGrid');
+  if (!grid) return;
+
+  const items = Array.from(grid.querySelectorAll('.gallery-item'));
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightboxImg');
+  const closeBtn = document.getElementById('lightboxClose');
+  const prevBtn = document.getElementById('lightboxPrev');
+  const nextBtn = document.getElementById('lightboxNext');
+
+  let currentIndex = 0;
+
+  function show(index) {
+    currentIndex = (index + items.length) % items.length;
+    const item = items[currentIndex];
+    lightboxImg.src = item.dataset.full;
+    lightboxImg.alt = item.querySelector('img').alt;
+  }
+
+  function open(index) {
+    show(index);
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  items.forEach((item, i) => {
+    item.addEventListener('click', () => open(i));
+  });
+
+  closeBtn.addEventListener('click', close);
+  prevBtn.addEventListener('click', () => show(currentIndex - 1));
+  nextBtn.addEventListener('click', () => show(currentIndex + 1));
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) close();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(currentIndex - 1);
+    if (e.key === 'ArrowRight') show(currentIndex + 1);
+  });
 })();
 
 // Smooth scroll for anchor links
