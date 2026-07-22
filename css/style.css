@@ -262,10 +262,10 @@ a {
 .hero-photo {
   position: absolute;
   inset: 0;
-  background-image: url('../images/meed_20260227_082903_0.jpg');
+  background-image: url('../images/meed_raw_20260227_082030.jpg');
   background-size: cover;
-  background-position: center 30%;
-  opacity: 0.42;
+  background-position: center 35%;
+  opacity: 0.5;
   z-index: 0;
 }
 
