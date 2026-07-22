@@ -1487,8 +1487,7 @@ a {
   .gallery-grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 180px; }
   .gallery-item--wide { grid-column: span 2; }
   .about-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .about-img-frame { max-width: 100%; aspect-ratio: 16/9; }
-  .about-img-placeholder { aspect-ratio: 16/9; height: auto; }
+  .about-img-frame { max-width: 340px; margin: 0 auto; }
   .about-labels { max-width: 100%; }
 }
 
