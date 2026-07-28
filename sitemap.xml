@@ -1,12 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://meedsyde.com/</loc>
-    <lastmod>2026-07-21</lastmod>
+    <lastmod>2026-07-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_neon_glasses.jpg</image:loc>
+      <image:title>Meed / Syde — Neon Glasses</image:title>
+      <image:caption>Meed / Syde wearing neon LED glasses behind the decks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_raw_20260227_092126.jpg</image:loc>
+      <image:title>Meed / Syde — The Hat</image:title>
+      <image:caption>Meed / Syde portrait wearing a backwards cap, red-lit close-up</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_raw_20260227_082030.jpg</image:loc>
+      <image:title>Meed / Syde — The Venue</image:title>
+      <image:caption>Meed / Syde DJ booth bathed in red haze</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_raw_20260227_081054.jpg</image:loc>
+      <image:title>Meed / Syde — Red Light</image:title>
+      <image:caption>Meed / Syde close up wearing LED shutter shades</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_raw_20260227_080417.jpg</image:loc>
+      <image:title>Meed / Syde — In The Booth</image:title>
+      <image:caption>Meed / Syde behind the Pioneer decks</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_raw_20260227_080422.jpg</image:loc>
+      <image:title>Meed / Syde — Mid Set</image:title>
+      <image:caption>Meed / Syde behind the decks, mid-set</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_raw_20260227_080423.jpg</image:loc>
+      <image:title>Meed / Syde — Deep Focus</image:title>
+      <image:caption>Meed / Syde focused on the mix</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_raw_20260227_080507.jpg</image:loc>
+      <image:title>Meed / Syde — The Mix</image:title>
+      <image:caption>Meed / Syde adjusting the mixer</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_raw_20260227_082033.jpg</image:loc>
+      <image:title>Meed / Syde — Peak Time</image:title>
+      <image:caption>Meed / Syde silhouette under red stage lighting</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_raw_20260227_081115.jpg</image:loc>
+      <image:title>Meed / Syde — On The Decks</image:title>
+      <image:caption>Meed / Syde at the turntables</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/meed_raw_20260227_080510.jpg</image:loc>
+      <image:title>Meed / Syde — Studio Session</image:title>
+      <image:caption>Meed / Syde in the studio session</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://meedsyde.com/images/og-cover.jpg</image:loc>
+      <image:title>Meed / Syde</image:title>
+      <image:caption>Meed / Syde — techno producer official cover image</image:caption>
+    </image:image>
   </url>
 </urlset>
