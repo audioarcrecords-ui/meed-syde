@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://meedsyde.com/sitemap.xml
+Sitemap: https://meed-syde.pages.dev/sitemap.xml
