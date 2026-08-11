@@ -37,7 +37,7 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "MusicGroup",
+        "@type": ["MusicGroup", "Organization"],
         "@id": "https://meed-syde.pages.dev/#artist",
         "name": "Meed / Syde",
         "alternateName": ["Meed Syde", "Meed/Syde", "meed_syde"],
@@ -56,6 +56,7 @@
         "logo": {
           "@type": "ImageObject",
           "url": "https://meed-syde.pages.dev/images/logo.png",
+          "contentUrl": "https://meed-syde.pages.dev/images/logo.png",
           "width": 512,
           "height": 512
         },
@@ -72,6 +73,15 @@
           "name": "Dor Silady",
           "jobTitle": "Techno Producer"
         }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://meed-syde.pages.dev/#website",
+        "url": "https://meed-syde.pages.dev",
+        "name": "Meed / Syde",
+        "description": "Official website of Meed / Syde — Techno Producer",
+        "publisher": {"@id": "https://meed-syde.pages.dev/#artist"},
+        "inLanguage": "en-US"
       },
       {
         "@type": "MusicRecording",
