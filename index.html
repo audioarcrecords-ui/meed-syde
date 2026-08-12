@@ -273,12 +273,12 @@
       </div>
       <div class="hero-stats">
         <div class="stat">
-          <span class="stat-num">19K+</span>
+          <span class="stat-num" id="stat-listeners">19K+</span>
           <span class="stat-label">Monthly Listeners</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num">6+</span>
+          <span class="stat-num" id="stat-releases">6+</span>
           <span class="stat-label">Releases</span>
         </div>
         <div class="stat-divider"></div>
@@ -696,5 +696,32 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    (function () {
+      function fmt(n) {
+        if (n >= 1000000) return (n / 1000000).toFixed(1).replace(/\.0$/, '') + 'M+';
+        if (n >= 1000) return Math.round(n / 1000) + 'K+';
+        return n + '+';
+      }
+
+      // Auto-count releases from rendered DOM
+      var releaseCards = document.querySelectorAll('.release-card');
+      if (releaseCards.length > 0) {
+        var el = document.getElementById('stat-releases');
+        if (el) el.textContent = releaseCards.length + '+';
+      }
+
+      // Fetch monthly listeners from stats.json
+      fetch('https://raw.githubusercontent.com/audioarcrecords-ui/meed-syde/main/stats.json')
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var el = document.getElementById('stat-listeners');
+          if (el && data.monthlyListeners) {
+            el.textContent = fmt(data.monthlyListeners);
+          }
+        })
+        .catch(function () { /* keep hardcoded fallback */ });
+    })();
+  </script>
 </body>
 </html>
